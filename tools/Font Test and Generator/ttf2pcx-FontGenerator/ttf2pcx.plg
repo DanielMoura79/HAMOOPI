@@ -1,0 +1,54 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: ttf2pcx - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x809 /fo".\Release/ttf2pcx.res" /d "NDEBUG" /d "_AFXDLL" "H:\CODE\ttf2pcx\ttf2pcx.rc"" 
+Creating temporary file "C:\DOCUME~1\MATTHE~1\LOCALS~1\Temp\RSP7C.tmp" with contents
+[
+/nologo /MD /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_MBCS" /D "_AFXDLL" /FR".\Release/" /Fp".\Release/ttf2pcx.pch" /Yu"stdafx.h" /Fo".\Release/" /Fd".\Release/" /FD /c 
+"H:\CODE\ttf2pcx\character.cpp"
+"H:\CODE\ttf2pcx\PreviewButton.cpp"
+"H:\CODE\ttf2pcx\ttf2pcx.cpp"
+"H:\CODE\ttf2pcx\ttf2pcxdlg.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\MATTHE~1\LOCALS~1\Temp\RSP7C.tmp" 
+Creating temporary file "C:\DOCUME~1\MATTHE~1\LOCALS~1\Temp\RSP7D.tmp" with contents
+[
+/nologo /MD /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_MBCS" /D "_AFXDLL" /FR".\Release/" /Fp".\Release/ttf2pcx.pch" /Yc"stdafx.h" /Fo".\Release/" /Fd".\Release/" /FD /c 
+"H:\CODE\ttf2pcx\StdAfx.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\MATTHE~1\LOCALS~1\Temp\RSP7D.tmp" 
+Creating temporary file "C:\DOCUME~1\MATTHE~1\LOCALS~1\Temp\RSP7E.tmp" with contents
+[
+/nologo /subsystem:windows /incremental:no /pdb:".\Release/ttf2pcx.pdb" /machine:I386 /out:".\Release/ttf2pcx.exe" 
+.\Release\character.obj
+.\Release\PreviewButton.obj
+.\Release\StdAfx.obj
+.\Release\ttf2pcx.obj
+.\Release\ttf2pcxdlg.obj
+.\Release\ttf2pcx.res
+]
+Creating command line "link.exe @C:\DOCUME~1\MATTHE~1\LOCALS~1\Temp\RSP7E.tmp"
+<h3>Output Window</h3>
+Compiling resources...
+Compiling...
+StdAfx.cpp
+Compiling...
+character.cpp
+PreviewButton.cpp
+ttf2pcx.cpp
+ttf2pcxdlg.cpp
+Generating Code...
+Linking...
+
+
+
+<h3>Results</h3>
+ttf2pcx.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>
