@@ -20,7 +20,7 @@
 ////////////////////////////////////////////////////////////////////////////////
 /*******************************************************************************
 	TO DO LIST: 
-	Aqui vai a minha lista de Prioridades (não está em ordem):
+	Aqui vai a minha lista de Prioridades (nï¿½o estï¿½ em ordem):
 	1- Configurar teclas / botoes / joystick no menu de opcoes
 	2- Adicionar suporte para PNG, MP3 e OGG
 	3- Adicionar modo Arcade, o jogo deve simular uma rom de fliperama, 
@@ -28,8 +28,8 @@
 	4- Implementar corretamente todo o sistema de especiais - 40% concluido
 	5- Backgrounds com multiplas layers animadas, musica do background
 	6- Reescrever o Editor de Personagens
-	7- Escrever a documentação do jogo
-	8- Revisar / otimizar todo o código
+	7- Escrever a documentaï¿½ï¿½o do jogo
+	8- Revisar / otimizar todo o cï¿½digo
 *******************************************************************************/
 
 #include <allegro.h>
@@ -311,7 +311,7 @@ float AnimTransTimer=-1; //animacao de transicao timer
 int CtrlAnimIntro[16];
 int CtrlAnimTrans[30];
 float EndRoundSlowDown=60;
-int EndRoundT=500; //tempo de espera até reinciar os rounds
+int EndRoundT=500; //tempo de espera atï¿½ reinciar os rounds
 int DonationScreen=0;
 int ApresentacaoMode=0;
 int menu_op=1;
@@ -578,11 +578,11 @@ char ED_Name_Display[50]="char1";
 // INICIALIZACAO ALLEGRO ------------------------------------------------[**02]
 ///////////////////////////////////////////////////////////////////////////////
 
-int main()
+int main(int argc, char **argv)
 {
-	set_uformat(U_ASCII); //permite usar acentuação no jogo (diacríticos)
+	set_uformat(U_ASCII); //permite usar acentuaï¿½ï¿½o no jogo (diacrï¿½ticos)
 	allegro_init(); install_timer(); install_keyboard(); install_mouse(); set_color_depth(32);
-	//set_gfx_mode() é declarado logo abaixo, apos carregar dados do SETUP.INI
+	//set_gfx_mode() ï¿½ declarado logo abaixo, apos carregar dados do SETUP.INI
 	install_sound(DIGI_AUTODETECT, MIDI_AUTODETECT, NULL);
 	int ModoFullscreen=0;
 	FONT *font_debug = load_font("system/font_debug.pcx", NULL, NULL);
@@ -626,7 +626,7 @@ int main()
 	if(WindowResX== 960 && WindowResY==720) WindowResNumber=6;
 	if(WindowResX==1024 && WindowResY==600) WindowResNumber=7;
 	if(WindowResX==1280 && WindowResY==720) WindowResNumber=8; //HD
-	//define se resolucao é fullscreen
+	//define se resolucao ï¿½ fullscreen
 	ModoFullscreen = get_config_int ( "CONFIG" , "FullScreen",  0 ) ;
 	//ajusta a tela com as novas configuracoes
 	if(ModoFullscreen==1) { set_gfx_mode(GFX_AUTODETECT_FULLSCREEN, WindowResX, WindowResY, 0, 0); }
@@ -1133,7 +1133,7 @@ int main()
 			}
 			if (strcmp (IDIOMA,"BR")==0){ 
 				textprintf_centre_ex(bufferx, font_19, 380, 30+10, makecol(000,000,000), -1, "Por favor considere fazer uma" );  
-				textprintf_centre_ex(bufferx, font_19, 380, 55+10, makecol(000,000,000), -1, "doação de qualquer quantia de" );  
+				textprintf_centre_ex(bufferx, font_19, 380, 55+10, makecol(000,000,000), -1, "doaï¿½ï¿½o de qualquer quantia de" );  
 				textprintf_centre_ex(bufferx, font_19, 380, 80+10, makecol(000,000,000), -1, "   para manter o projeto vivo" );
 				textprintf_centre_ex(bufferx, font_19, 380, 80+10, makecol(000,140,010), -1, "   BTC                            " );  
 				textprintf_centre_ex(bufferx, font_19, 320,   400, makecol(000,000,000), -1, "Obrigado, Equipe Hamoopi" );  
@@ -1193,17 +1193,17 @@ int main()
 				textprintf_centre_ex(bufferx, font_30, 322, 227+30*0, makecol(000,000,000), -1, "ARCADE" );
 				textprintf_centre_ex(bufferx, font_30, 322, 227+30*1, makecol(000,000,000), -1, "VERSUS" );
 				textprintf_centre_ex(bufferx, font_30, 322, 227+30*2, makecol(000,000,000), -1, "EDITOR" );
-				textprintf_centre_ex(bufferx, font_30, 322, 227+30*3, makecol(000,000,000), -1, "OPÇÕES" );
+				textprintf_centre_ex(bufferx, font_30, 322, 227+30*3, makecol(000,000,000), -1, "OPï¿½ï¿½ES" );
 				textprintf_centre_ex(bufferx, font_30, 322, 227+30*4, makecol(000,000,000), -1, "SAIR" );
 				textprintf_centre_ex(bufferx, font_30, 320, 225+30*0, makecol(155,155,155), -1, "ARCADE" );
 				textprintf_centre_ex(bufferx, font_30, 320, 225+30*1, makecol(255,255,255), -1, "VERSUS" );
 				textprintf_centre_ex(bufferx, font_30, 320, 225+30*2, makecol(255,255,255), -1, "EDITOR" );
-				textprintf_centre_ex(bufferx, font_30, 320, 225+30*3, makecol(255,255,255), -1, "OPÇÕES" );
+				textprintf_centre_ex(bufferx, font_30, 320, 225+30*3, makecol(255,255,255), -1, "OPï¿½ï¿½ES" );
 				textprintf_centre_ex(bufferx, font_30, 320, 225+30*4, makecol(255,010,005), -1, "SAIR" );
 				if (menu_op==1) textprintf_centre_ex(bufferx, font_30, 320, 225+30*0, makecol(255,170,000), -1, "ARCADE" );
 				if (menu_op==2) textprintf_centre_ex(bufferx, font_30, 320, 225+30*1, makecol(255,170,000), -1, "VERSUS" );
 				if (menu_op==3) textprintf_centre_ex(bufferx, font_30, 320, 225+30*2, makecol(255,170,000), -1, "EDITOR" );
-				if (menu_op==4) textprintf_centre_ex(bufferx, font_30, 320, 225+30*3, makecol(255,170,000), -1, "OPÇÕES" );
+				if (menu_op==4) textprintf_centre_ex(bufferx, font_30, 320, 225+30*3, makecol(255,170,000), -1, "OPï¿½ï¿½ES" );
 				if (menu_op==5) textprintf_centre_ex(bufferx, font_30, 320, 225+30*4, makecol(255,170,000), -1, "SAIR" );
 			}
 			
@@ -1371,7 +1371,7 @@ int main()
 				draw_sprite(bufferx, flag_BR, 422, 58); 
 				textprintf_ex(bufferx, font_20, 192, 82+(espacamento* 0), makecol(025,025,025), -1, "Idioma: %s", IDIOMA); 
 				textprintf_ex(bufferx, font_20, 192, 82+(espacamento* 1), makecol(025,025,025), -1, "Rounds: %i", RoundTotal); 
-				textprintf_ex(bufferx, font_20, 192, 82+(espacamento* 2), makecol(025,025,025), -1, "Relógio: %i", RoundTime/60); 
+				textprintf_ex(bufferx, font_20, 192, 82+(espacamento* 2), makecol(025,025,025), -1, "Relï¿½gio: %i", RoundTime/60); 
 				textprintf_ex(bufferx, font_20, 192, 82+(espacamento* 3), makecol(025,025,025), -1, "P1 Energia: %i", P[1].Energy/10); 
 				textprintf_ex(bufferx, font_20, 192, 82+(espacamento* 4), makecol(025,025,025), -1, "P1 Especial: %i", P[1].Special/10); 
 				textprintf_ex(bufferx, font_20, 192, 82+(espacamento* 5), makecol(025,025,025), -1, "P2 Energia: %i", P[2].Energy/10); 
@@ -1393,7 +1393,7 @@ int main()
 				textprintf_ex(bufferx, font_20, 192, 82+(espacamento*14), makecol(025,025,025), -1, "SAIR" ); 
 				textprintf_ex(bufferx, font_20, 190, 80+(espacamento* 0), makecol(255,255,255), -1, "Idioma: %s", IDIOMA); 
 				textprintf_ex(bufferx, font_20, 190, 80+(espacamento* 1), makecol(255,255,255), -1, "Rounds: %i", RoundTotal); 
-				textprintf_ex(bufferx, font_20, 190, 80+(espacamento* 2), makecol(255,255,255), -1, "Relógio: %i", RoundTime/60); 
+				textprintf_ex(bufferx, font_20, 190, 80+(espacamento* 2), makecol(255,255,255), -1, "Relï¿½gio: %i", RoundTime/60); 
 				textprintf_ex(bufferx, font_20, 190, 80+(espacamento* 3), makecol(255,255,255), -1, "P1 Energia: %i", P[1].Energy/10); 
 				textprintf_ex(bufferx, font_20, 190, 80+(espacamento* 4), makecol(255,255,255), -1, "P1 Especial: %i", P[1].Special/10); 
 				textprintf_ex(bufferx, font_20, 190, 80+(espacamento* 5), makecol(255,255,255), -1, "P2 Energia: %i", P[2].Energy/10); 
@@ -1415,7 +1415,7 @@ int main()
 				textprintf_ex(bufferx, font_20, 190, 80+(espacamento*14), makecol(255,010,005), -1, "SAIR" ); 
 				if (options_op== 1) textprintf_ex(bufferx, font_20, 190, 80+(espacamento* 0), makecol(255,170,000), -1, "Idioma: %s", IDIOMA); 
 				if (options_op== 2) textprintf_ex(bufferx, font_20, 190, 80+(espacamento* 1), makecol(255,170,000), -1, "Rounds: %i", RoundTotal);
-				if (options_op== 3) textprintf_ex(bufferx, font_20, 190, 80+(espacamento* 2), makecol(255,170,000), -1, "Relógio: %i", RoundTime/60); 
+				if (options_op== 3) textprintf_ex(bufferx, font_20, 190, 80+(espacamento* 2), makecol(255,170,000), -1, "Relï¿½gio: %i", RoundTime/60); 
 				if (options_op== 4) textprintf_ex(bufferx, font_20, 190, 80+(espacamento* 3), makecol(255,170,000), -1, "P1 Energia: %i", P[1].Energy/10); 
 				if (options_op== 5) textprintf_ex(bufferx, font_20, 190, 80+(espacamento* 4), makecol(255,170,000), -1, "P1 Especial: %i", P[1].Special/10); 
 				if (options_op== 6) textprintf_ex(bufferx, font_20, 190, 80+(espacamento* 5), makecol(255,170,000), -1, "P2 Energia: %i", P[2].Energy/10); 
@@ -1488,7 +1488,7 @@ int main()
 		if (SelectCharMode==1) {
 			
 			if(timermenus==0) { play_midi(bgm_select_screen, 1); } //bgm
-			//atribui IDs de Navegação / Carrega primeira imagem BIG ao inicializar
+			//atribui IDs de Navegaï¿½ï¿½o / Carrega primeira imagem BIG ao inicializar
 			if (Qtde_Personagens_Instalados>=1 && timermenus==0) { 
 				SelectCharP1ID=1; 
 				SelectCharP2ID=Qtde_Personagens_Instalados; 
@@ -1742,7 +1742,7 @@ int main()
 					if(ind==7) { sprintf(str, "770"); }
 					if(ind==8) { sprintf(str, "780"); }
 					if(ind==9) { sprintf(str, "790"); }
-					P[1].Special_Inputs_c[ind][1]  = get_config_int(str, "c1" , 0); //0 é neutro
+					P[1].Special_Inputs_c[ind][1]  = get_config_int(str, "c1" , 0); //0 ï¿½ neutro
 					P[1].Special_Inputs_c[ind][2]  = get_config_int(str, "c2" , 0);
 					P[1].Special_Inputs_c[ind][3]  = get_config_int(str, "c3" , 0);
 					P[1].Special_Inputs_c[ind][4]  = get_config_int(str, "c4" , 0);
@@ -1758,7 +1758,7 @@ int main()
 					P[1].Special_Inputs_c[ind][14] = get_config_int(str, "c14", 0);
 					P[1].Special_Inputs_c[ind][15] = get_config_int(str, "c15", 0);
 					P[1].Special_Inputs_c[ind][16] = get_config_int(str, "c16", 0);
-					P[1].Special_Inputs_b[ind][1]  = get_config_int(str, "b1" , 0)*-1; //0 é neutro
+					P[1].Special_Inputs_b[ind][1]  = get_config_int(str, "b1" , 0)*-1; //0 ï¿½ neutro
 					P[1].Special_Inputs_b[ind][2]  = get_config_int(str, "b2" , 0)*-1;
 					P[1].Special_Inputs_b[ind][3]  = get_config_int(str, "b3" , 0)*-1;
 					P[1].Special_Inputs_b[ind][4]  = get_config_int(str, "b4" , 0)*-1;
@@ -1877,7 +1877,7 @@ int main()
 					if(ind==7) { sprintf(str, "770"); }
 					if(ind==8) { sprintf(str, "780"); }
 					if(ind==9) { sprintf(str, "790"); }
-					P[2].Special_Inputs_c[ind][1]  = get_config_int(str, "c1" , 0); //0 é neutro
+					P[2].Special_Inputs_c[ind][1]  = get_config_int(str, "c1" , 0); //0 ï¿½ neutro
 					P[2].Special_Inputs_c[ind][2]  = get_config_int(str, "c2" , 0);
 					P[2].Special_Inputs_c[ind][3]  = get_config_int(str, "c3" , 0);
 					P[2].Special_Inputs_c[ind][4]  = get_config_int(str, "c4" , 0);
@@ -1893,7 +1893,7 @@ int main()
 					P[2].Special_Inputs_c[ind][14] = get_config_int(str, "c14", 0);
 					P[2].Special_Inputs_c[ind][15] = get_config_int(str, "c15", 0);
 					P[2].Special_Inputs_c[ind][16] = get_config_int(str, "c16", 0);
-					P[2].Special_Inputs_b[ind][1]  = get_config_int(str, "b1" , 0)*-1; //0 é neutro
+					P[2].Special_Inputs_b[ind][1]  = get_config_int(str, "b1" , 0)*-1; //0 ï¿½ neutro
 					P[2].Special_Inputs_b[ind][2]  = get_config_int(str, "b2" , 0)*-1;
 					P[2].Special_Inputs_b[ind][3]  = get_config_int(str, "b3" , 0)*-1;
 					P[2].Special_Inputs_b[ind][4]  = get_config_int(str, "b4" , 0)*-1;
@@ -2274,11 +2274,11 @@ int main()
 			if (!P2_1) { P2_1=load_bitmap("system/000_01.pcx", NULL); }
 		}
 		
-		//timer_rounds é um contador de frames crescente utilizado em animacoes
+		//timer_rounds ï¿½ um contador de frames crescente utilizado em animacoes
 		timer_rounds++; 
 		if (timer_rounds>=250) { desabilita_players=0; } else { RoundTime++; }
 		
-		//final de round //RoundTime é um contador de frames decrescente utilizado pelo relogio da luta
+		//final de round //RoundTime ï¿½ um contador de frames decrescente utilizado pelo relogio da luta
 		if(RoundTime==60) { RoundTime=0; } //segundo zero nao conta
 		if (RoundTime==0) { 
 			desabilita_players=1; 
@@ -2456,7 +2456,7 @@ int main()
 		///////////////////////////////////////////////////////////////////////////
 		
 		//Faz a transicao de um estado para outro e define o comportamento dos personagens.
-		//Um pre requisito para ativar os movimentos é ter as imagens correspondentes na pasta do personagem.
+		//Um pre requisito para ativar os movimentos ï¿½ ter as imagens correspondentes na pasta do personagem.
 		
 		for(int ind=1;ind<=2;ind++){
 			
@@ -2547,7 +2547,7 @@ int main()
 							} else { ativa_especial++; }
 						} else { ativa_especial++; }
 						if( P[ind].Special_Inputs_Ord[esp][0]==ativa_especial ){ 
-							//força do golpe
+							//forï¿½a do golpe
 							if(ind==1){ if(P[1].bt_slot[1]*-1==-1 || P[1].bt_slot[1]*-1==-4){ ForcaDoGolpeP1=1; P[1].Special_Version=1; } }
 							if(ind==1){ if(P[1].bt_slot[1]*-1==-2 || P[1].bt_slot[1]*-1==-5){ ForcaDoGolpeP1=2; P[1].Special_Version=2; } }
 							if(ind==1){ if(P[1].bt_slot[1]*-1==-3 || P[1].bt_slot[1]*-1==-6){ ForcaDoGolpeP1=3; P[1].Special_Version=3; } }
@@ -2574,7 +2574,7 @@ int main()
 								if( especial_ativado==indx ){
 									if( P[ind].TotalDeFramesMov[num]>-1 && P[ind].State!=num  ){
 										// validacao evita soltar especial no ar 
-										// MomentoDoP...==1 significa que o Player esta de Pé
+										// MomentoDoP...==1 significa que o Player esta de Pï¿½
 										// solucao temporaria
 										int validacao=0; 
 										if(ind==1 && MomentoDoP1==1){validacao=1;}
@@ -2584,7 +2584,7 @@ int main()
 											//tudo ok para soltar a magia, mas antes, preciso verificar se
 											//todos os comandos feitos pelo jogador foram realizados dentro do tempo de 1,5 segundos
 											
-											//primeiro preciso saber quantos inputs tem o especial em questão
+											//primeiro preciso saber quantos inputs tem o especial em questï¿½o
 											int totaldeinputs=0;
 											if(num==700){ totaldeinputs=P[ind].Special_Inputs_c[0][0]+P[ind].Special_Inputs_b[0][0]; }
 											if(num==710){ totaldeinputs=P[ind].Special_Inputs_c[1][0]+P[ind].Special_Inputs_b[1][0]; }
@@ -3624,7 +3624,7 @@ int main()
 		///////////////////////////////////////////////////////////////////////////
 		
 		//Afasta os jogadores quando ocorre sobreposicao de posicao
-		//Dois corpos nao ocupam o mesmo lugar no espaço :)
+		//Dois corpos nao ocupam o mesmo lugar no espaï¿½o :)
 		if(contatofisico==1){
 			if(P[1].x<=P[2].x) { P[1].x-=1; P[2].x+=1; 
 				if(P[1].x <= 30){ P[1].x = 30; P[2].x += 1;} 
@@ -4202,7 +4202,7 @@ int main()
 			}
 			
 			//somente aplica os atuadores do 2 frame em diante da animacao
-			//lembrando que o atuador do primeiro frame é carregado no LOAD_PLAYER
+			//lembrando que o atuador do primeiro frame ï¿½ carregado no LOAD_PLAYER
 			if( P[ind].IndexAnim>0 ){
 				
 				//X//
@@ -4318,8 +4318,8 @@ int main()
 			}
 		}
 		
-		if(P[1].x<MeioDaTela) { VScreen_FatorZoom=abs((P[1].x-80)-(P[2].x+80)); } //no inicio do round o valor é 320 }
-		else                  { VScreen_FatorZoom=abs((P[2].x-80)-(P[1].x+80)); } //no inicio do round o valor é 320 }
+		if(P[1].x<MeioDaTela) { VScreen_FatorZoom=abs((P[1].x-80)-(P[2].x+80)); } //no inicio do round o valor ï¿½ 320 }
+		else                  { VScreen_FatorZoom=abs((P[2].x-80)-(P[1].x+80)); } //no inicio do round o valor ï¿½ 320 }
 		if(VScreen_FatorZoom<=250) { VScreen_FatorZoom=250; } //limita a diminuicao do zoom
 		
 		if(ZoomMaximoAtingido==0){ 
@@ -4376,7 +4376,7 @@ int main()
 		if (P1HitPause==0) { ShakeTemp2=0; }
 		int carga; //indexador para o SprAtlas
 		
-		//define a prioridade de desenho, quem ataca é desenhado por cima do oponente
+		//define a prioridade de desenho, quem ataca ï¿½ desenhado por cima do oponente
 		for(int ind=1;ind<=2;ind++){
 			if(
 				/*P1_HitBox_tot>0 || */
@@ -4529,7 +4529,7 @@ int main()
 			
 		}
 		
-		//Controle de Fireball´s 
+		//Controle de Fireballï¿½s 
 		for(int ind=1; ind<=2; ind++){
 			
 			if(P[ind].QtdeMagias>0){
@@ -4543,7 +4543,7 @@ int main()
 					if(carga!=0) break; 
 				}
 				//depois, pega a imagem SprAtlas correspondente ao indexador, e a coloca em Fireball[n].Spr
-				//precisa otimizar, pois nao é reamente necessario fazer  blit toda hora, apenas na hora de mudar o frame de animacao
+				//precisa otimizar, pois nao ï¿½ reamente necessario fazer  blit toda hora, apenas na hora de mudar o frame de animacao
 				blit(P[ind].SprAtlas[carga], Fireball[ind].Spr, 0, 0, 0, 0, P[ind].SprAtlas[carga]->w, P[ind].SprAtlas[carga]->h); 
 				Fireball[ind].Spr->w  = P[ind].SprAtlas[carga]->w; 
 				Fireball[ind].Spr->h  = P[ind].SprAtlas[carga]->h;
@@ -4556,7 +4556,7 @@ int main()
 				
 				//Teste de colisao das Fireballs
 				//No momento testa apenas 1 Hitbox contra 1 Collision Box
-				//É necessario armazenar os valores em vetores, matriz bidimensional, para otimizar o codigo 
+				//ï¿½ necessario armazenar os valores em vetores, matriz bidimensional, para otimizar o codigo 
 				
 				int P1hb_HurtBox01x1 = ((P[1].x)*2)+(P[1].Lado*P1_HurtBox01x1)*2;
 				int P1hb_HurtBox01x2 = ((P[1].x)*2)+(P[1].Lado*P1_HurtBox01x2)*2;
@@ -4850,7 +4850,7 @@ int main()
 		}
 		
 		/*
-			// debug de Spark´s
+			// debug de Sparkï¿½s
 			if(Qtde_HitBox>0){
 			textprintf_centre_ex(LayerHUD, font_debug, 320,  50, makecol(255,255,255), -1, "HitSpark[1].x: %i", HitSpark[1].x);
 			textprintf_centre_ex(LayerHUD, font_debug, 320,  60, makecol(255,255,255), -1, "HitSpark[1].y: %i", HitSpark[1].y);
@@ -5961,9 +5961,9 @@ int main()
 		if (key_Mouse_R_status==1 && mouse_x>5 && mouse_x<81 && mouse_y>120 && mouse_y<150) //Recuar States R
 		{ MovPossiveisIndex-=10; if (MovPossiveisIndex<0) { MovPossiveisIndex=0; } ED_CarregarDados=1; }
 		
-		if (key_Mouse_L_status==1 && mouse_x>88 && mouse_x<165 && mouse_y>120 && mouse_y<150) //Avançar States L
+		if (key_Mouse_L_status==1 && mouse_x>88 && mouse_x<165 && mouse_y>120 && mouse_y<150) //Avanï¿½ar States L
 		{ MovPossiveisIndex++; if (MovPossiveis[MovPossiveisIndex]==0) { MovPossiveisIndex--; } ED_CarregarDados=1; }
-		if (key_Mouse_R_status==1 && mouse_x>88 && mouse_x<165 && mouse_y>120 && mouse_y<150) //Avançar States R
+		if (key_Mouse_R_status==1 && mouse_x>88 && mouse_x<165 && mouse_y>120 && mouse_y<150) //Avanï¿½ar States R
 		{ MovPossiveisIndex+=10; if (MovPossiveis[MovPossiveisIndex]==0) { MovPossiveisIndex-=10; } ED_CarregarDados=1; }
 		
 		if 
@@ -7171,7 +7171,7 @@ if(FadeCtr!=0){
 	drawing_mode(DRAW_MODE_SOLID, 0, 0, 0);
 }
 
-//efeito animação de Introducao (AnimIntro)
+//efeito animaï¿½ï¿½o de Introducao (AnimIntro)
 if(ApresentacaoMode==1){
 	if (AnimIntroTimer!=-1){
 		for (int ind=0;ind<16;ind++){
@@ -10450,7 +10450,7 @@ void Aplicar_HIT(){
 	if ( colisaoxP1==1 || colisaoxP1Fireball==1 )
 	{
 		
-		//colisao contra P1 de uma fireball lançada pelo P2
+		//colisao contra P1 de uma fireball lanï¿½ada pelo P2
 		if(colisaoxP1Fireball==1){
 			if(P[2].TotalDeFramesMov[702] >-1){
 				Fireball[2].State=702;
@@ -10544,7 +10544,7 @@ void Aplicar_HIT(){
 	if ( colisaoxP2==1 || colisaoxP2Fireball==1 )
 	{
 		
-		//colisao contra P2 de uma fireball lançada pelo P1
+		//colisao contra P2 de uma fireball lanï¿½ada pelo P1
 		if(colisaoxP2Fireball==1){
 			if(P[1].TotalDeFramesMov[702] >-1){
 				Fireball[1].State=702;
@@ -10621,7 +10621,7 @@ void Aplicar_HIT(){
 		if (P[2].Energy<=0) { rest(HitPauseKO); EndRoundSlowDown=1; AHitP1=0; P[2].StartFrame=timer; PLAYER_STATE(2, 570, 0, P[2].TotalDeFramesMov[570]); P1HitPause=HitPause3; P[2].Energy=0; P1HitOn=P[2].IndexAnim; }
 	}
 	
-	//Chacoalha os personagens após o Hit, e os desloca
+	//Chacoalha os personagens apï¿½s o Hit, e os desloca
 	if (P1HitPause>0 || P2HitPause>0) 
 	{
 		ShakeDist=ShakeDist*-1;
@@ -10716,7 +10716,7 @@ void New_Fireball(int Player){
 		Fireball[Player].TotalFrames=P[Player].TotalDeFramesMov[701];
 		//Fireball[Player].StartFrame=time;
 		if(Player==1){
-			//tem q verificar a força de variacao tb (DMG), vou implementar depois.
+			//tem q verificar a forï¿½a de variacao tb (DMG), vou implementar depois.
 			//V1 = fraco, V2 = medio, V3 = forte
 			if(ForcaDoGolpeP1==1){
 				if (Fireball[Player].TotalFrames>= 0) {P1_Fireball_FrameTime_00 = get_config_int("701", "V1_FrameTime_00", 6)-1; }
@@ -10785,7 +10785,7 @@ void New_Fireball(int Player){
 		}
 		
 		if(Player==2){
-			//tem q verificar a força de variacao tb (DMG), vou implementar depois.
+			//tem q verificar a forï¿½a de variacao tb (DMG), vou implementar depois.
 			//V1 = fraco, V2 = medio, V3 = forte
 			if(ForcaDoGolpeP2==1){
 				if (Fireball[Player].TotalFrames>= 0) {P2_Fireball_FrameTime_00 = get_config_int("701", "V1_FrameTime_00", 6)-1; }
@@ -11369,7 +11369,7 @@ void ED_load_charini(){
 		if (ED_TotalFrames>=29) {ED_FrameTime_29 = get_config_int(ED_State_s, "V3_FrameTime_29", 6)-1; } 
 	}
 	
-	//salva o tempo de animacao 6 (se o tempo do frame for vazio, usa 6, que é o padrao)
+	//salva o tempo de animacao 6 (se o tempo do frame for vazio, usa 6, que ï¿½ o padrao)
 	if(ED_State<700){
 		if (ED_TotalFrames>= 0 && ED_FrameTime_00==5) { set_config_int(ED_State_s, "FrameTime_00", ED_FrameTime_00+1); }
 		if (ED_TotalFrames>= 1 && ED_FrameTime_01==5) { set_config_int(ED_State_s, "FrameTime_01", ED_FrameTime_01+1); }
@@ -11533,7 +11533,7 @@ void ED_load_inputs(int ED_State){
 		if(ind==7) { sprintf(str, "770"); }
 		if(ind==8) { sprintf(str, "780"); }
 		if(ind==9) { sprintf(str, "790"); }
-		P[1].Special_Inputs_c[ind][1]  = get_config_int(str, "c1" , 0); //0 é neutro
+		P[1].Special_Inputs_c[ind][1]  = get_config_int(str, "c1" , 0); //0 ï¿½ neutro
 		P[1].Special_Inputs_c[ind][2]  = get_config_int(str, "c2" , 0);
 		P[1].Special_Inputs_c[ind][3]  = get_config_int(str, "c3" , 0);
 		P[1].Special_Inputs_c[ind][4]  = get_config_int(str, "c4" , 0);
@@ -11549,7 +11549,7 @@ void ED_load_inputs(int ED_State){
 		P[1].Special_Inputs_c[ind][14] = get_config_int(str, "c14", 0);
 		P[1].Special_Inputs_c[ind][15] = get_config_int(str, "c15", 0);
 		P[1].Special_Inputs_c[ind][16] = get_config_int(str, "c16", 0);
-		P[1].Special_Inputs_b[ind][1]  = get_config_int(str, "b1" , 0)*-1; //0 é neutro
+		P[1].Special_Inputs_b[ind][1]  = get_config_int(str, "b1" , 0)*-1; //0 ï¿½ neutro
 		P[1].Special_Inputs_b[ind][2]  = get_config_int(str, "b2" , 0)*-1;
 		P[1].Special_Inputs_b[ind][3]  = get_config_int(str, "b3" , 0)*-1;
 		P[1].Special_Inputs_b[ind][4]  = get_config_int(str, "b4" , 0)*-1;
@@ -11695,7 +11695,7 @@ void ED_inicializar(){
 	if (ED_TotalFrames>=28) {ED_FrameTime_28 = get_config_int(ED_State_s, "FrameTime_28", 6)-1; }
 	if (ED_TotalFrames>=29) {ED_FrameTime_29 = get_config_int(ED_State_s, "FrameTime_29", 6)-1; }
 	
-	//salva o tempo de animacao 6 (se o tempo do frame for vazio, usa 6, que é o padrao)
+	//salva o tempo de animacao 6 (se o tempo do frame for vazio, usa 6, que ï¿½ o padrao)
 	if (ED_TotalFrames>= 0 && ED_FrameTime_00==5) { set_config_int(ED_State_s, "FrameTime_00", ED_FrameTime_00+1); }
 	if (ED_TotalFrames>= 1 && ED_FrameTime_01==5) { set_config_int(ED_State_s, "FrameTime_01", ED_FrameTime_01+1); }
 	if (ED_TotalFrames>= 2 && ED_FrameTime_02==5) { set_config_int(ED_State_s, "FrameTime_02", ED_FrameTime_02+1); }
