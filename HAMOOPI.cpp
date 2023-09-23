@@ -580,7 +580,7 @@ char ED_Name_Display[50]="char1";
 
 int main()
 {
-set_uformat(U_ASCII); //permite usar acentuação no jogo (diacríticos)
+set_uformat(U_UTF8); //permite usar acentuação no jogo (diacríticos)
 allegro_init(); install_timer(); install_keyboard(); install_mouse(); set_color_depth(32);
 //set_gfx_mode() é declarado logo abaixo, apos carregar dados do SETUP.INI
 install_sound(DIGI_AUTODETECT, MIDI_AUTODETECT, NULL);
